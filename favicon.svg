@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #0C1624; }
+    .m { stroke: #BFE3F5; }
+    @media (prefers-color-scheme: dark) { .bg { fill: #BFE3F5; } .m { stroke: #0C1624; } }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <g class="m" fill="none" stroke-width="4.5" stroke-linecap="round" transform="translate(0 -4)">
+    <path d="M10 46H54"/>
+    <path d="M16 46 20.5 38.2"/>
+    <path d="M24 46 31.5 33"/>
+    <path d="M32 46 42 28.7"/>
+    <path d="M40 46 47 33.9"/>
+    <path d="M48 46 51.5 39.9"/>
+  </g>
+</svg>

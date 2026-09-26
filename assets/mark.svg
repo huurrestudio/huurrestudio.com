@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+  <!-- Huurre mark: a twig with rime needles growing off one side, the way
+       real hoarfrost builds up on the windward edge of a branch. -->
+  <path d="M8 46H56"/>
+  <path d="M14 46 19 37"/>
+  <path d="M23 46 31.5 31.3"/>
+  <path d="M32 46 43 27"/>
+  <path d="M41 46 49 32.1"/>
+  <path d="M50 46 54 39.1"/>
+</svg>
