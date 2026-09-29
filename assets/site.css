@@ -71,6 +71,12 @@ a:hover { text-decoration-thickness: 2px; }
 .nav a[aria-current="page"] { color: var(--accent); }
 .nav { flex-wrap: nowrap; }
 @media (max-width: 560px) { .brand span { display: none; } .nav { gap: 0; } .nav a { padding: 10px 7px; font-size: 14px; white-space: nowrap; } }
+/* with four links, small phones put the menu on its own row under the logo */
+@media (max-width: 480px) {
+  .site-header .wrap { flex-wrap: wrap; row-gap: 0; padding: 6px 0; }
+  .brand span { display: inline; }
+  .nav { width: calc(100% + 14px); margin: 0 -7px; justify-content: space-between; }
+}
 
 /* ---------- type ---------- */
 h1, h2, h3 { line-height: 1.12; letter-spacing: -0.025em; margin: 0 0 0.5em; }
@@ -235,3 +241,40 @@ mark.todo { background: #FFE58A; color: #3A2E00; padding: 0 4px; border-radius: 
 .card h3 { margin-bottom: .3em; }
 
 .email-btn { margin: 0 0 40px; }
+
+/* ---------- Goat Bash feature (the game's fjord blue and sunny gold) ---------- */
+.gb {
+  --gb-gold: #FFC83D; --gb-ink: #FFFFFF; --gb-dim: rgba(255,255,255,.86);
+  background: linear-gradient(165deg, #3E9BD6 0%, #1E6CA3 55%, #144B78 100%); color: var(--gb-ink);
+}
+.gb::before { /* soft sunburst behind the screenshots */
+  background-image: repeating-conic-gradient(from 0deg at 72% 38%, rgba(255,214,110,.10) 0deg 9deg, transparent 9deg 18deg);
+  background-size: auto; mask-image: radial-gradient(ellipse at 72% 40%, #000 20%, transparent 70%);
+}
+.gb .eyebrow { color: var(--gb-gold); }
+.gb h1, .gb h2, .gb .gb-title {
+  font-family: "Lilita One", var(--font); text-transform: none; letter-spacing: .01em; line-height: .92;
+  font-size: clamp(48px, 6.4vw, 88px); color: var(--gb-gold); font-weight: 400;
+  -webkit-text-stroke: .12em #3A2414; paint-order: stroke fill; text-shadow: 0 .06em 0 #3A2414;
+}
+.gb .gb-sub { display: inline-block; margin: 10px 0 20px; padding: 6px 14px; border-radius: 8px; background: #2F78BD;
+  box-shadow: 0 0 0 2px #3A2414; font-family: "Lilita One", var(--font); font-size: 20px; letter-spacing: .02em; color: #fff; }
+.gb p { color: var(--gb-dim); }
+.gb a { color: var(--gb-gold); }
+.gb .chips li { border-color: rgba(255,255,255,.35); color: var(--gb-ink); }
+.gb .btn-primary { background: var(--gb-gold); color: #3A2414; }
+.gb .btn-primary:hover { background: #FFDB75; color: #3A2414; }
+.gb .badge-soon { border-color: rgba(255,255,255,.4); color: var(--gb-ink); }
+.gb .badge-soon small { color: var(--gb-dim); }
+.gb :focus-visible { outline-color: var(--gb-gold); }
+.gb-icon { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 10px 24px -8px rgba(0,0,0,.45); margin-bottom: 18px; }
+
+/* landscape screenshots in phone frames: one large, one overlapping below */
+.lands { position: relative; padding: 8px 0 12%; }
+.land {
+  border-radius: 22px; padding: 6px; background: #18202e;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.land img { border-radius: 17px; aspect-ratio: 1280 / 600; object-fit: cover; }
+.land + .land { position: absolute; width: 62%; right: -4%; bottom: 0; }
+@media (max-width: 480px) { .land { border-radius: 16px; padding: 4px; } .land img { border-radius: 12px; } .land + .land { display: none; } .lands { padding-bottom: 0; } }

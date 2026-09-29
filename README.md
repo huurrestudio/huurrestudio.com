@@ -5,6 +5,8 @@ A plain static site with no build step: HTML and CSS, plus images. Host it free 
 ```
 index.html              Home
 deep-signal/index.html  Deep Signal page
+goat-bash/index.html    Goat Bash page
+goat-bash/privacy/      Goat Bash privacy policy (all ages, child-directed ads)
 support/index.html      Support / FAQ
 privacy/index.html      Privacy Policy
 404.html                "Page not found"
@@ -67,4 +69,4 @@ In `index.html` and `deep-signal/index.html`, replace the **"Coming soon · on t
 ## Editing later
 
 - Colours and spacing: `assets/site.css`. The tokens at the top control light and dark mode.
-- Header and footer are repeated in each page. If you add a link, update all five HTML files.
+- Header and footer are repeated in each page. If you add a link, update all seven HTML files.
