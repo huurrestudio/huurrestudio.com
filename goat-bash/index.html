@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Goat Bash: Fjord Trolls | Huurre Studio</title>
-<meta name="description" content="Goat Bash: Fjord Trolls — A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.">
+<meta name="description" content="Goat Bash: Fjord Trolls. A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.">
 <link rel="canonical" href="https://huurrestudio.com/goat-bash/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Goat Bash: Fjord Trolls | Huurre Studio">
-<meta property="og:description" content="Goat Bash: Fjord Trolls — A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.">
+<meta property="og:description" content="Goat Bash: Fjord Trolls. A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.">
 <meta property="og:image" content="https://huurrestudio.com/assets/goat-bash/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4F7F9" media="(prefers-color-scheme: light)">
@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -29,58 +30,93 @@
       Huurre <span>Studio</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="/#games" aria-current="page">Games</a>
+      <details class="menu">
+        <summary class="is-current">Games <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="menu-list">
+          <li><a href="/deep-signal/">
+            <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
+            <span><strong>Deep Signal</strong><small>Space Shooter</small></span>
+          </a></li>
+          <li><a href="/goat-bash/" aria-current="page">
+            <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
+            <span><strong>Goat Bash</strong><small>Fjord Trolls</small></span>
+          </a></li>
+          <li class="menu-all"><a href="/#games">All games</a></li>
+        </ul>
+      </details>
       <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="page-top">
+  <div class="hero game-hero">
     <div class="wrap">
-      <article class="game game--goat-bash" aria-labelledby="goat-bash-title">
-        <div class="game-text">
-          <img class="game-icon" src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
-          <p class="eyebrow">Coming soon · Android &amp; iOS</p>
-          <h1 id="goat-bash-title" class="game-title">Goat<br>Bash</h1>
-          <p class="game-sub">Fjord Trolls</p>
-          <p class="game-summary">A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.</p>
-          <ul class="chips" aria-label="Highlights"><li>Physics puzzles</li><li>30 levels</li><li>12 languages</li></ul>
-          <div class="btns">
-            <span class="badge-soon" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7M9 11.5l3 3 3-3"/></svg><span>Coming soon<small>on Google Play, then the App Store</small></span></span>
-          </div>
-        </div>
-        <div class="shots shots--landscape">
-          <div class="shot"><img src="/assets/goat-bash/action.jpg" width="1280" height="600" alt="Goat Bash gameplay: Big Billy head-butts a troll with a BONK!, a barrel of troll potion explodes and trolls fly towards the water."></div>
-          <div class="shot"><img src="/assets/goat-bash/herd.jpg" width="1280" height="600" alt="The Pick your herd screen under the northern lights: two leaps for Pip, two for Bramble and one for Big Billy." loading="lazy"></div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="flush-top" aria-label="Features">
-    <div class="wrap">
-      <div class="grid-3"><div class="card"><h3>Pick your herd</h3><p>Pip leaps the farthest and dashes mid-air, Bramble's bleat blows trolls away, and Big Billy hits the hardest.</p></div><div class="card"><h3>Bonk! Boom! Splash!</h3><p>Topple towers, set off barrels of troll potion and roll boulders down icy slopes.</p></div><div class="card"><h3>30 levels, 3 worlds</h3><p>From the sunny Fjord Meadow through the Autumn Pines to the Frost Peaks under the northern lights.</p></div></div>
-      <div class="game-facts">
-        <dl class="details" aria-label="Game details"><div><dt>Genre</dt><dd>Physics puzzle</dd></div><div><dt>Age</dt><dd>All ages</dd></div><div><dt>Price</dt><dd>Free, with family-friendly ads between levels</dd></div><div><dt>Languages</dt><dd>12</dd></div><div><dt>Account</dt><dd>None needed; progress stays on your device</dd></div></dl>
-        <div class="help-links">
-          <a class="btn btn-ghost" href="/support/#goat-bash">Goat Bash support</a>
-          <a class="btn btn-ghost" href="/privacy/#goat-bash">Goat Bash privacy</a>
+      <div>
+        <p class="crumbs"><a href="/#games">Games</a> <span aria-hidden="true">/</span> Goat Bash</p>
+        <p class="eyebrow">Coming soon · Android &amp; iOS</p>
+        <h1>Goat Bash</h1>
+        <p class="game-page-sub">Fjord Trolls</p>
+        <p class="lede">A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.</p>
+        <ul class="chips chips--plain" aria-label="Highlights"><li>Physics puzzles</li><li>30 levels</li><li>12 languages</li></ul>
+        <div class="btns">
+          <span class="badge-soon badge-soon--plain" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7M9 11.5l3 3 3-3"/></svg><span>Coming soon<small>on Google Play, then the App Store</small></span></span>
+          <a class="btn btn-ghost" href="#help">Help &amp; questions</a>
         </div>
       </div>
+      <div class="game-art game--goat-bash" aria-hidden="true">
+        <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section class="band" aria-labelledby="shots-title">
+    <div class="wrap">
+      <h2 id="shots-title">Screenshots</h2>
+    </div>
+    <ul class="gallery" tabindex="0" aria-label="Goat Bash screenshots, scroll sideways for more"><li><img src="/assets/goat-bash/action.jpg" width="1280" height="600" alt="Goat Bash gameplay: Big Billy head-butts a troll with a BONK!, a barrel of troll potion explodes and trolls fly towards the water." loading="lazy"></li><li><img src="/assets/goat-bash/herd.jpg" width="1280" height="600" alt="The Pick your herd screen under the northern lights: two leaps for Pip, two for Bramble and one for Big Billy." loading="lazy"></li><li><img src="/assets/goat-bash/aim.jpg" width="1280" height="600" alt="Goat Bash: Big Billy aims a leap at a wooden tower full of trolls, with a dotted arc showing the jump." loading="lazy"></li></ul>
+  </section>
+
+  <section class="band" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">About the game</h2>
+      <div class="grid-3"><div class="card"><h3>Pick your herd</h3><p>Pip leaps the farthest and dashes mid-air, Bramble's bleat blows trolls away, and Big Billy hits the hardest.</p></div><div class="card"><h3>Bonk! Boom! Splash!</h3><p>Topple towers, set off barrels of troll potion and roll boulders down icy slopes.</p></div><div class="card"><h3>30 levels, 3 worlds</h3><p>From the sunny Fjord Meadow through the Autumn Pines to the Frost Peaks under the northern lights.</p></div></div>
+      <dl class="details" aria-label="Game details"><div><dt>Genre</dt><dd>Physics puzzle</dd></div><div><dt>Age</dt><dd>All ages</dd></div><div><dt>Price</dt><dd>Free, with family-friendly ads between levels</dd></div><div><dt>Languages</dt><dd>12</dd></div><div><dt>Account</dt><dd>None needed; progress stays on your device</dd></div></dl>
     </div>
   </section>
 
-  <section class="flush-top" aria-labelledby="more-title">
+  <section class="band" id="help" aria-labelledby="help-title">
+    <div class="wrap narrow">
+      <h2 id="help-title">Help &amp; questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I play?</summary>
+          <div><p>Press anywhere, drag back and let go: the selected goat leaps the opposite way. Tap while it's in the air for its special move. Knock every troll into the water to clear the level.</p></div>
+        </details>
+        <details>
+          <summary>Why can't I press Go?</summary>
+          <div><p>Before a level you pick your herd, and every leap needs a goat. Tap the goats (or <strong>+</strong>) until all leaps are filled, then press <strong>Go!</strong></p></div>
+        </details>
+        <details>
+          <summary>What do the goats do?</summary>
+          <div><p><strong>Pip</strong> leaps the farthest and dashes to wherever you tap. <strong>Bramble</strong>'s bleat blows trolls away. <strong>Big Billy</strong> hits the hardest and slams down with a shockwave.</p></div>
+        </details>
+        <details>
+          <summary>What about ads?</summary>
+          <div><p>Goat Bash shows family-friendly ads between levels, and you can choose to watch a short video for 2 extra leaps. Ads are never personalised and the game doesn't use your advertising ID. Playing offline means no ads. See the <a href="/privacy/#all-ages-games">privacy policy</a>.</p></div>
+        </details>
+      </div>
+      <p class="small-print">Still stuck? Email <a href="mailto:hello@huurrestudio.com?subject=Goat%20Bash">hello@huurrestudio.com</a>. Privacy: Goat Bash is a game for <a href="/privacy/#all-ages-games">all ages, including children</a>.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="more-title">
     <div class="wrap">
-      <h2 id="more-title" class="h3">More from Huurre Studio</h2>
-      <div class="mini-games">
-        <a class="mini-game" href="/deep-signal/">
+      <h2 id="more-title">More games</h2>
+      <div class="mini-games"><a class="mini-game" href="/deep-signal/">
           <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="" loading="lazy">
           <span><strong>Deep Signal</strong><small>Space Shooter</small></span>
-        </a>
-      </div>
+        </a></div>
     </div>
   </section>
 </main>
@@ -89,8 +125,7 @@
   <div class="wrap">
     <p style="margin:0">© 2026 Huurre Studio · <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a></p>
     <nav aria-label="Footer">
-      <a href="/deep-signal/">Deep Signal</a>
-      <a href="/goat-bash/">Goat Bash</a>
+      <a href="/#games">Games</a>
       <a href="/support/">Support</a>
       <a href="/privacy/">Privacy Policy</a>
     </nav>

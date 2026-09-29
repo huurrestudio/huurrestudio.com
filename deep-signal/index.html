@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deep Signal: Space Shooter | Huurre Studio</title>
-<meta name="description" content="Deep Signal: Space Shooter — A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.">
+<meta name="description" content="Deep Signal: Space Shooter. A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.">
 <link rel="canonical" href="https://huurrestudio.com/deep-signal/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Deep Signal: Space Shooter | Huurre Studio">
-<meta property="og:description" content="Deep Signal: Space Shooter — A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.">
+<meta property="og:description" content="Deep Signal: Space Shooter. A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.">
 <meta property="og:image" content="https://huurrestudio.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4F7F9" media="(prefers-color-scheme: light)">
@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -29,59 +30,93 @@
       Huurre <span>Studio</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="/#games" aria-current="page">Games</a>
+      <details class="menu">
+        <summary class="is-current">Games <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="menu-list">
+          <li><a href="/deep-signal/" aria-current="page">
+            <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
+            <span><strong>Deep Signal</strong><small>Space Shooter</small></span>
+          </a></li>
+          <li><a href="/goat-bash/">
+            <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
+            <span><strong>Goat Bash</strong><small>Fjord Trolls</small></span>
+          </a></li>
+          <li class="menu-all"><a href="/#games">All games</a></li>
+        </ul>
+      </details>
       <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="page-top">
+  <div class="hero game-hero">
     <div class="wrap">
-      <article class="game game--deep-signal" aria-labelledby="deep-signal-title">
-        <div class="game-text">
-          <img class="game-icon" src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
-          <p class="eyebrow">Coming soon · Android &amp; iOS</p>
-          <h1 id="deep-signal-title" class="game-title">Deep<br>Signal</h1>
-          <p class="game-sub">Space Shooter</p>
-          <p class="game-summary">A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.</p>
-          <ul class="chips" aria-label="Highlights"><li>One-thumb controls</li><li>Quick runs</li><li>12 languages</li></ul>
-          <div class="btns">
-            <span class="badge-soon" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7M9 11.5l3 3 3-3"/></svg><span>Coming soon<small>on Google Play &amp; the App Store</small></span></span>
-          </div>
-        </div>
-        <div class="shots shots--portrait">
-          <div class="shot"><img src="/assets/deep-signal/upgrade.jpg" width="720" height="1558" alt="Deep Signal level-up screen: choose one of three upgrades — Rapid Fire, Vitality Cell or Swift Drive."></div>
-          <div class="shot"><img src="/assets/deep-signal/menu.jpg" width="720" height="1558" alt="Deep Signal main menu: the title above a glowing signal trace, a ship rising past a blue planet, and a Play button." loading="lazy"></div>
-          <div class="shot"><img src="/assets/deep-signal/gameplay.jpg" width="720" height="1558" alt="Deep Signal gameplay: the player&#x27;s ship firing at purple and red enemy ships, with glowing pickups and a x16 combo." loading="lazy"></div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="flush-top" aria-label="Features">
-    <div class="wrap">
-      <div class="grid-3"><div class="card"><h3>One thumb</h3><p>Steer with one thumb. Your ship aims and fires by itself.</p></div><div class="card"><h3>Quick runs</h3><p>A run takes a few minutes. Beat your best time and wave, with a boss every third wave.</p></div><div class="card"><h3>Your music</h3><p>Play the soundtrack, or your own music from any app.</p></div></div>
-      <div class="game-facts">
-        <dl class="details" aria-label="Game details"><div><dt>Genre</dt><dd>Arcade space shooter</dd></div><div><dt>Age</dt><dd>13 and over</dd></div><div><dt>Price</dt><dd>Free, with ads between runs</dd></div><div><dt>Languages</dt><dd>12</dd></div><div><dt>Account</dt><dd>None needed; progress stays on your device</dd></div></dl>
-        <div class="help-links">
-          <a class="btn btn-ghost" href="/support/#deep-signal">Deep Signal support</a>
-          <a class="btn btn-ghost" href="/privacy/#deep-signal">Deep Signal privacy</a>
+      <div>
+        <p class="crumbs"><a href="/#games">Games</a> <span aria-hidden="true">/</span> Deep Signal</p>
+        <p class="eyebrow">Coming soon · Android &amp; iOS</p>
+        <h1>Deep Signal</h1>
+        <p class="game-page-sub">Space Shooter</p>
+        <p class="lede">A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.</p>
+        <ul class="chips chips--plain" aria-label="Highlights"><li>One-thumb controls</li><li>Quick runs</li><li>12 languages</li></ul>
+        <div class="btns">
+          <span class="badge-soon badge-soon--plain" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7M9 11.5l3 3 3-3"/></svg><span>Coming soon<small>on Google Play &amp; the App Store</small></span></span>
+          <a class="btn btn-ghost" href="#help">Help &amp; questions</a>
         </div>
       </div>
+      <div class="game-art game--deep-signal" aria-hidden="true">
+        <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section class="band" aria-labelledby="shots-title">
+    <div class="wrap">
+      <h2 id="shots-title">Screenshots</h2>
+    </div>
+    <ul class="gallery" tabindex="0" aria-label="Deep Signal screenshots, scroll sideways for more"><li><img src="/assets/deep-signal/upgrade.jpg" width="720" height="1558" alt="Deep Signal level-up screen: choose one of three upgrades — Rapid Fire, Vitality Cell or Swift Drive." loading="lazy"></li><li><img src="/assets/deep-signal/menu.jpg" width="720" height="1558" alt="Deep Signal main menu: the title above a glowing signal trace, a ship rising past a blue planet, and a Play button." loading="lazy"></li><li><img src="/assets/deep-signal/gameplay.jpg" width="720" height="1558" alt="Deep Signal gameplay: the player&#x27;s ship firing at purple and red enemy ships, with glowing pickups and a x16 combo." loading="lazy"></li></ul>
+  </section>
+
+  <section class="band" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">About the game</h2>
+      <div class="grid-3"><div class="card"><h3>One thumb</h3><p>Steer with one thumb. Your ship aims and fires by itself.</p></div><div class="card"><h3>Quick runs</h3><p>A run takes a few minutes. Beat your best time and wave, with a boss every third wave.</p></div><div class="card"><h3>Your music</h3><p>Play the soundtrack, or your own music from any app.</p></div></div>
+      <dl class="details" aria-label="Game details"><div><dt>Genre</dt><dd>Arcade space shooter</dd></div><div><dt>Age</dt><dd>13 and over</dd></div><div><dt>Price</dt><dd>Free, with ads between runs</dd></div><div><dt>Languages</dt><dd>12</dd></div><div><dt>Account</dt><dd>None needed; progress stays on your device</dd></div></dl>
     </div>
   </section>
 
-  <section class="flush-top" aria-labelledby="more-title">
+  <section class="band" id="help" aria-labelledby="help-title">
+    <div class="wrap narrow">
+      <h2 id="help-title">Help &amp; questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I play?</summary>
+          <div><p>Drag the control wheel to steer. Your ship fires by itself. Collect orbs to level up and pick an upgrade each time.</p></div>
+        </details>
+        <details>
+          <summary>Can I play my own music?</summary>
+          <div><p>Yes: <strong>Settings → Background Music → Your Music</strong>, then play music from any app.</p></div>
+        </details>
+        <details>
+          <summary>How do I change my name?</summary>
+          <div><p><strong>Settings → Change Name</strong>.</p></div>
+        </details>
+        <details>
+          <summary>How do I change my ad choices?</summary>
+          <div><p>In the game: <strong>Settings → Privacy Choices</strong> (where available). On iPhone: <strong>Settings → Privacy &amp; Security → Tracking</strong>. On Android: <strong>Settings → Google → Ads</strong>. See the <a href="/privacy/#teen-games">privacy policy</a>.</p></div>
+        </details>
+      </div>
+      <p class="small-print">Still stuck? Email <a href="mailto:hello@huurrestudio.com?subject=Deep%20Signal">hello@huurrestudio.com</a>. Privacy: Deep Signal is a game for <a href="/privacy/#teen-games">13 and over</a>.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="more-title">
     <div class="wrap">
-      <h2 id="more-title" class="h3">More from Huurre Studio</h2>
-      <div class="mini-games">
-        <a class="mini-game" href="/goat-bash/">
+      <h2 id="more-title">More games</h2>
+      <div class="mini-games"><a class="mini-game" href="/goat-bash/">
           <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="" loading="lazy">
           <span><strong>Goat Bash</strong><small>Fjord Trolls</small></span>
-        </a>
-      </div>
+        </a></div>
     </div>
   </section>
 </main>
@@ -90,8 +125,7 @@
   <div class="wrap">
     <p style="margin:0">© 2026 Huurre Studio · <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a></p>
     <nav aria-label="Footer">
-      <a href="/deep-signal/">Deep Signal</a>
-      <a href="/goat-bash/">Goat Bash</a>
+      <a href="/#games">Games</a>
       <a href="/support/">Support</a>
       <a href="/privacy/">Privacy Policy</a>
     </nav>

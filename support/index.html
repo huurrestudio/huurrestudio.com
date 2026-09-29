@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -29,9 +30,21 @@
       Huurre <span>Studio</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="/#games">Games</a>
+      <details class="menu">
+        <summary>Games <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="menu-list">
+          <li><a href="/deep-signal/">
+            <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
+            <span><strong>Deep Signal</strong><small>Space Shooter</small></span>
+          </a></li>
+          <li><a href="/goat-bash/">
+            <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
+            <span><strong>Goat Bash</strong><small>Fjord Trolls</small></span>
+          </a></li>
+          <li class="menu-all"><a href="/#games">All games</a></li>
+        </ul>
+      </details>
       <a href="/support/" aria-current="page">Support</a>
-      <a href="/privacy/">Privacy</a>
     </nav>
   </div>
 </header>
@@ -41,53 +54,38 @@
     <div class="wrap">
       <article class="prose">
         <h1>Support</h1>
-        <p class="lede">Questions or problems with one of our games? Find your game below, or send us an email.</p>
-        <div class="btns email-btn"><a class="btn btn-primary" href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a></div>
-        <nav class="game-switch" aria-label="Games"><a href="#deep-signal"><img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">Deep Signal</a><a href="#goat-bash"><img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">Goat Bash</a></nav>
+        <p class="lede">Questions or problems with one of our games? The answers below cover all our games, and each game's page has its own help section.</p>
+        <div class="contact-card">
+          <div><strong>Email us</strong><p>We read every message and usually reply within a few days.</p></div>
+          <a class="btn btn-primary" href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a>
+        </div>
 
-        <h2 id="deep-signal" class="game-heading"><img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">Deep Signal</h2>
+        <h2 id="common">Common questions</h2>
         <div class="faq">
         <details>
-          <summary>How do I play?</summary>
-          <div><p>Drag the control wheel to steer. Your ship fires by itself. Collect orbs to level up and pick an upgrade each time.</p></div>
+          <summary>Where is my progress saved?</summary>
+          <div><p>On your device. Our games have no accounts, so progress stays on the phone or tablet you play on, and deleting a game deletes it.</p></div>
         </details>
         <details>
-          <summary>Can I play my own music?</summary>
-          <div><p>Yes: <strong>Settings → Background Music → Your Music</strong>, then play music from any app.</p></div>
+          <summary>Can I play offline?</summary>
+          <div><p>Yes. All our games work without an internet connection; ads just don't load while you're offline.</p></div>
         </details>
         <details>
-          <summary>How do I change my name?</summary>
-          <div><p><strong>Settings → Change Name</strong>.</p></div>
+          <summary>Why are there ads, and can I change them?</summary>
+          <div><p>Ads keep our games free. Games for all ages only ever show family-friendly, non-personalised ads. In games for 13 and over, you choose whether ads are personalised: in the game under <strong>Settings → Privacy Choices</strong>, on iPhone under <strong>Settings → Privacy &amp; Security → Tracking</strong>, and on Android under <strong>Settings → Google → Ads</strong>. More in our <a href="/privacy/">privacy policy</a>.</p></div>
         </details>
         <details>
-          <summary>How do I change my ad choices?</summary>
-          <div><p>In the game: <strong>Settings → Privacy Choices</strong> (where available). On iPhone: <strong>Settings → Privacy &amp; Security → Tracking</strong>. On Android: <strong>Settings → Google → Ads</strong>.</p></div>
-        </details>
-        </div>
-        <p class="section-links"><a href="/deep-signal/">About Deep Signal</a> · <a href="/privacy/#deep-signal">Deep Signal privacy</a></p>
-        <h2 id="goat-bash" class="game-heading"><img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">Goat Bash</h2>
-        <div class="faq">
-        <details>
-          <summary>How do I play?</summary>
-          <div><p>Press anywhere, drag back and let go: the selected goat leaps the opposite way. Tap while it's in the air for its special move. Knock every troll into the water to clear the level.</p></div>
+          <summary>Which languages are supported?</summary>
+          <div><p>Our games are available in 12 languages and follow your device's language. You can also change it in the game's settings.</p></div>
         </details>
         <details>
-          <summary>Why can't I press Go?</summary>
-          <div><p>Before a level you pick your herd, and every leap needs a goat. Tap the goats (or <strong>+</strong>) until all leaps are filled, then press <strong>Go!</strong></p></div>
+          <summary>I found a bug. What should I send?</summary>
+          <div><p>Email <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a> with the game's name, your phone or tablet model, and what happened. A screenshot helps. We usually reply within a few days.</p></div>
         </details>
-        <details>
-          <summary>What do the goats do?</summary>
-          <div><p><strong>Pip</strong> leaps the farthest and dashes to wherever you tap. <strong>Bramble</strong>'s bleat blows trolls away. <strong>Big Billy</strong> hits the hardest and slams down with a shockwave.</p></div>
-        </details>
-        <details>
-          <summary>What about ads?</summary>
-          <div><p>Goat Bash shows family-friendly ads between levels, and you can choose to watch a short video for 2 extra leaps. Ads are never personalised and the game doesn't use your advertising ID. Playing offline means no ads. See the <a href="/privacy/#goat-bash">Goat Bash privacy section</a>.</p></div>
-        </details>
-        </div>
-        <p class="section-links"><a href="/goat-bash/">About Goat Bash</a> · <a href="/privacy/#goat-bash">Goat Bash privacy</a></p>
+      </div>
 
-        <h2 id="general">Something not working?</h2>
-        <p>Email us at <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a> and tell us which game, your phone or tablet model, and what happened. A screenshot helps. We usually reply within a few days.</p>
+        <h2 id="game-help">Help for a specific game</h2>
+        <ul class="link-list"><li><a href="/deep-signal/#help"><span><strong>Deep Signal</strong><small>Space Shooter</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="/goat-bash/#help"><span><strong>Goat Bash</strong><small>Fjord Trolls</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul>
       </article>
     </div>
   </div>
@@ -97,8 +95,7 @@
   <div class="wrap">
     <p style="margin:0">© 2026 Huurre Studio · <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a></p>
     <nav aria-label="Footer">
-      <a href="/deep-signal/">Deep Signal</a>
-      <a href="/goat-bash/">Goat Bash</a>
+      <a href="/#games">Games</a>
       <a href="/support/">Support</a>
       <a href="/privacy/">Privacy Policy</a>
     </nav>

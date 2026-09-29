@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -29,9 +30,21 @@
       Huurre <span>Studio</span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="/#games">Games</a>
+      <details class="menu">
+        <summary>Games <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ul class="menu-list">
+          <li><a href="/deep-signal/">
+            <img src="/assets/deep-signal/icon.png" width="256" height="256" alt="">
+            <span><strong>Deep Signal</strong><small>Space Shooter</small></span>
+          </a></li>
+          <li><a href="/goat-bash/">
+            <img src="/assets/goat-bash/icon.png" width="256" height="256" alt="">
+            <span><strong>Goat Bash</strong><small>Fjord Trolls</small></span>
+          </a></li>
+          <li class="menu-all"><a href="/#games">All games</a></li>
+        </ul>
+      </details>
       <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy</a>
     </nav>
   </div>
 </header>
@@ -50,8 +63,7 @@
   <div class="wrap">
     <p style="margin:0">© 2026 Huurre Studio · <a href="mailto:hello@huurrestudio.com">hello@huurrestudio.com</a></p>
     <nav aria-label="Footer">
-      <a href="/deep-signal/">Deep Signal</a>
-      <a href="/goat-bash/">Goat Bash</a>
+      <a href="/#games">Games</a>
       <a href="/support/">Support</a>
       <a href="/privacy/">Privacy Policy</a>
     </nav>
