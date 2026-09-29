@@ -12,6 +12,7 @@ Help section), a line on the Support page, a row in the privacy policy's
 table and a sitemap entry. Nothing else grows: the header, footer, support
 page and privacy policy are written to scale to any number of games.
 """
+import hashlib
 from html import escape
 from pathlib import Path
 
@@ -21,6 +22,16 @@ EMAIL = 'hello@huurrestudio.com'
 UPDATED = '29 September 2026'
 FONTS = ('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400'
          '&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap')
+
+
+def asset(path):
+    """An asset's address with a version code taken from its contents.
+    GitHub Pages lets browsers keep files for 10 minutes, so without this a
+    browser could pair a new page with the stylesheet it saved before an
+    update (a broken header). A changed file gets a new address instead."""
+    digest = hashlib.sha1((SITE / path.lstrip('/')).read_bytes()).hexdigest()[:10]
+    return f'{path}?v={digest}'
+
 
 # Who a game is made for decides which privacy rules apply to it.
 AUDIENCES = {
@@ -146,8 +157,8 @@ def head(title, description, path, og_image='/assets/og-image.png'):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="{asset('/assets/site.css')}">
+<script src="{asset('/assets/site.js')}" defer></script>
 </head>'''
 
 
