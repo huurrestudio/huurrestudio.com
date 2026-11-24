@@ -21,7 +21,7 @@ BASE = 'https://huurrestudio.com'
 EMAIL = 'hello@huurrestudio.com'
 UPDATED = '29 September 2026'
 FONTS = ('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400'
-         '&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap')
+         '&family=Lilita+One&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@900&family=Space+Grotesk:wght@700&display=swap')
 
 
 def asset(path):
@@ -51,8 +51,9 @@ GAMES = [
         'title_html': 'Deep<br>Signal',
         'subtitle': 'Space Shooter',
         'audience': 'teen',
-        'status': 'Coming soon · Android &amp; iOS',
-        'store_note': 'on Google Play &amp; the App Store',
+        'status': 'Out now on Android · iOS coming soon',
+        'store_note': 'iOS coming soon',
+        'play': 'https://play.google.com/store/apps/details?id=com.huurrestudio.deepsignal',
         'summary': 'A fast, one-thumb space shooter. Steer while your ship fires on its own, pick upgrades as you level up, and survive the bosses.',
         'chips': ['One-thumb controls', 'Quick runs', '12 languages'],
         'shots': 'portrait',      # the home page banner's screenshot layout
@@ -88,8 +89,9 @@ GAMES = [
         'title_html': 'Goat<br>Bash',
         'subtitle': 'Fjord Trolls',
         'audience': 'all',
-        'status': 'Coming soon · Android &amp; iOS',
-        'store_note': 'on Google Play, then the App Store',
+        'status': 'Out now on Android · iOS coming soon',
+        'store_note': 'iOS coming soon',
+        'play': 'https://play.google.com/store/apps/details?id=com.huurrestudio.goatbash',
         'summary': 'A physics puzzle game for the whole family. Pick your herd, then leap, head-butt and splash cheeky trolls into the fjord.',
         'chips': ['Physics puzzles', '30 levels', '12 languages'],
         'shots': 'landscape',
@@ -120,6 +122,48 @@ GAMES = [
             ('What about ads?', '<p>Goat Bash shows family-friendly ads between levels, and you can choose to watch a short video for 2 extra leaps. Ads are never personalised and the game doesn\'t use your advertising ID. Playing offline means no ads. See the <a href="/privacy/#all-ages-games">privacy policy</a>.</p>'),
         ],
     },
+    {
+        'slug': 'disc-golf-wilds',
+        'name': 'Disc Golf Wilds',
+        'title_html': 'Disc Golf<br>Wilds',
+        'subtitle': '3D Disc Golf',
+        'audience': 'teen',
+        'status': 'Coming soon · Android, then iOS',
+        'store_note': 'on Google Play, then the App Store',
+        # add 'play': 'https://play.google.com/store/apps/details?id=com.huurrestudio.discgolfwilds' once Google approves it
+        'summary': 'Real disc golf in 3D. Pull, tilt and let go, and watch your disc turn and fade like the real thing through parkland, spruce forest and granite coast.',
+        'chips': ['Real flight physics', '27 holes', '13 languages'],
+        'shots': 'portrait',
+        'images': [
+            ('chains.jpg', 720, 1280, 'Disc Golf Wilds: a gold disc caught in the chains of a basket, backlit by the sunset at Granite Bay.'),
+            ('water.jpg', 720, 1280, 'Disc Golf Wilds: an orange disc flying low over a calm lake toward an island green, trees reflected in the water.'),
+            ('island.jpg', 720, 1280, 'Disc Golf Wilds: an aerial view of the island green on Granite Bay hole 3, a wooden bridge leading across the water.'),
+        ],
+        'gallery_extra': [
+            ('gameplay.jpg', 720, 1280, 'Disc Golf Wilds gameplay: aiming at the island green, 58 m to the basket, with the disc ready at the bottom of the screen.'),
+            ('shop.jpg', 720, 1280, 'The Pro Shop: the Falcon distance driver with its flight numbers 9, 5, -2, 1 and a chart of its flight.'),
+            ('birch.jpg', 720, 1280, 'Disc Golf Wilds: a disc flying over the Birch Park pond, with reeds and trees reflected in the water.'),
+        ],
+        'og_image': '/assets/disc-golf-wilds/og.jpg',
+        'features': [
+            ('Real flight', 'Every disc has speed, glide, turn and fade, and flies like the real ones. Tilt your release to bend the line.'),
+            ('Three courses', 'Open Birch Park, the tight tunnels of Spruce Hollow and the sea wind of Granite Bay: 27 holes.'),
+            ('Your pace', 'No energy timers and no account. Your bag, coins and best rounds stay on your phone.'),
+        ],
+        'details': [
+            ('Genre', 'Sports, disc golf'),
+            ('Age', '13 and over'),
+            ('Price', 'Free, with ads between holes'),
+            ('Languages', '13'),
+            ('Account', 'None needed; progress stays on your device'),
+        ],
+        'faq': [
+            ('How do I throw?', '<p>Put your finger on the disc at the bottom of the screen, pull it down for power and let go. Slide sideways while pulling to tilt the disc: it curves the way it\'s tilted. Drag anywhere else to look around.</p>'),
+            ('Which disc should I use?', '<p>Drivers fly farthest but need a strong arm, putters are the most accurate. The number under each disc is how far it goes for you. Your arm gets stronger as you level up.</p>'),
+            ('The game runs slowly on my phone', '<p>Open <strong>Settings → Graphics</strong> and choose <strong>Performance</strong>. It applies right away.</p>'),
+            ('How do I change my ad choices?', '<p>In the game: <strong>Settings → Privacy Choices</strong> (where available). On iPhone: <strong>Settings → Privacy &amp; Security → Tracking</strong>. On Android: <strong>Settings → Google → Ads</strong>. See the <a href="/privacy/#teen-games">privacy policy</a>.</p>'),
+        ],
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -128,6 +172,8 @@ GAMES = [
 ICON_PHONE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
               'stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/>'
               '<path d="M12 7.5v7M9 11.5l3 3 3-3"/></svg>')
+ICON_PLAY = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+             '<path d="M5 3.6v16.8c0 .8.9 1.3 1.6.9l14.1-8.4c.7-.4.7-1.4 0-1.8L6.6 2.7C5.9 2.3 5 2.8 5 3.6z"/></svg>')
 ICON_ARROW = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" '
               'stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>')
 ICON_CHEVRON = ('<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" '
@@ -218,6 +264,9 @@ def page(title, description, path, current, main, og_image='/assets/og-image.png
 
 
 def badge(g, cls=''):
+    if g.get('play'):
+        return (f'<a class="badge-soon badge-store{cls}" href="{g["play"]}" rel="noopener">{ICON_PLAY}'
+                f'<span>Get it on Google Play<small>{g["store_note"]}</small></span></a>')
     return (f'<span class="badge-soon{cls}" role="note">{ICON_PHONE}'
             f'<span>Coming soon<small>{g["store_note"]}</small></span></span>')
 
@@ -387,7 +436,7 @@ GENERAL_FAQ = [
     ('Where is my progress saved?', '<p>On your device. Our games have no accounts, so progress stays on the phone or tablet you play on, and deleting a game deletes it.</p>'),
     ('Can I play offline?', '<p>Yes. All our games work without an internet connection; ads just don\'t load while you\'re offline.</p>'),
     ('Why are there ads, and can I change them?', '<p>Ads keep our games free. Games for all ages only ever show family-friendly, non-personalised ads. In games for 13 and over, you choose whether ads are personalised: in the game under <strong>Settings → Privacy Choices</strong>, on iPhone under <strong>Settings → Privacy &amp; Security → Tracking</strong>, and on Android under <strong>Settings → Google → Ads</strong>. More in our <a href="/privacy/">privacy policy</a>.</p>'),
-    ('Which languages are supported?', '<p>Our games are available in 12 languages and follow your device\'s language. You can also change it in the game\'s settings.</p>'),
+    ('Which languages are supported?', '<p>Our games are available in 12 languages (Disc Golf Wilds in 13, including Indonesian) and follow your device\'s language. You can also change it in the game\'s settings.</p>'),
     ('I found a bug. What should I send?', f'<p>Email <a href="mailto:{EMAIL}">{EMAIL}</a> with the game\'s name, your phone or tablet model, and what happened. A screenshot helps. We usually reply within a few days.</p>'),
 ]
 

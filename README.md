@@ -3,17 +3,21 @@
 A plain static site with no build step: HTML and CSS, plus images. Host it free on GitHub Pages under **huurrestudio.com**.
 
 ```
-index.html              Home
-deep-signal/index.html  Deep Signal page
-goat-bash/index.html    Goat Bash page
-goat-bash/privacy/      Goat Bash privacy policy (all ages, child-directed ads)
-support/index.html      Support / FAQ
-privacy/index.html      Privacy Policy
-404.html                "Page not found"
+_build/build.py         Generates every page below (edit this, then run it)
+index.html              Home: studio intro and all games
+deep-signal/index.html  Deep Signal page        (generated)
+goat-bash/index.html    Goat Bash page          (generated)
+disc-golf-wilds/index.html  Disc Golf Wilds page (generated)
+support/index.html      Support: common questions + list of games (generated)
+privacy/index.html      One combined Privacy Policy (generated)
+404.html                "Page not found"        (generated)
+sitemap.xml             (generated)
 app-ads.txt             AdMob seller declaration (pub-6257007554304023)
 CNAME                   Tells GitHub Pages the custom domain
 favicon.svg, apple-touch-icon.png, assets/…  Logo, styles, screenshots, share image
 ```
+
+**All HTML pages are generated.** Don't edit them by hand: change `_build/build.py` (texts, games, FAQ, privacy sections) and run `python3 _build/build.py` in this folder. When a game goes live, add its `'play'` store link to its entry in `GAMES`: the "Coming soon" badge turns into a "Get it on Google Play" button. Adding a game means adding one entry to `GAMES` plus its images in `assets/<slug>/` and a `.game--<slug>` colour theme in `assets/site.css`. It then appears in the header's Games menu, on the home page, gets its own page with a Help section, a line on Support, a row in the privacy table and a sitemap entry. Old addresses that moved forward to their new place via `REDIRECTS` in the script.
 
 ## 1. Fill in the placeholders (privacy page)
 
@@ -54,7 +58,7 @@ Delete any default "parking" A records name.com created. After DNS updates (minu
 
 | Where | Field | URL |
 |---|---|---|
-| AdMob → Privacy & messaging | App privacy policy | https://huurrestudio.com/privacy/ |
+| AdMob → Privacy & messaging | App privacy policy | https://huurrestudio.com/privacy/ (the same combined policy for every game) |
 | App Store Connect → App Information | Privacy Policy URL | https://huurrestudio.com/privacy/ |
 | App Store Connect → Version | Support URL | https://huurrestudio.com/support/ |
 | App Store Connect → Version | Marketing URL | https://huurrestudio.com/deep-signal/ |
@@ -69,4 +73,4 @@ In `index.html` and `deep-signal/index.html`, replace the **"Coming soon · on t
 ## Editing later
 
 - Colours and spacing: `assets/site.css`. The tokens at the top control light and dark mode.
-- Header and footer are repeated in each page. If you add a link, update all seven HTML files.
+- Header, footer and the game banners come from `_build/build.py`, so they stay identical on every page.

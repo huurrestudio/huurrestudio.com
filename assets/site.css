@@ -160,6 +160,10 @@ section.flush-top { padding-top: 0; }
 }
 .badge-soon svg { width: 20px; height: 20px; }
 .badge-soon small { display: block; font-weight: 500; font-size: 12px; color: var(--g-dim); line-height: 1.2; }
+/* once a game is out, the badge becomes a link to its store page */
+a.badge-store { text-decoration: none; background: rgba(255,255,255,.06); transition: background .15s, border-color .15s; }
+a.badge-store:hover { background: rgba(255,255,255,.12); border-color: var(--g-accent); color: var(--g-ink); }
+a.badge-store svg { color: var(--g-accent); }
 
 /* screenshots in device frames: three portrait phones, or two landscape phones overlapping */
 .shot { background: #151c29; padding: 6px; border-radius: 26px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08) inset; }
@@ -188,6 +192,13 @@ section.flush-top { padding-top: 0; }
 .game--goat-bash { --g-bg: linear-gradient(165deg, #3E9BD6 0%, #1E6CA3 55%, #144B78 100%); --g-ink: #fff; --g-dim: rgba(255,255,255,.88);
   --g-accent: #FFC83D; --g-accent-ink: #3A2414; --g-line: rgba(255,255,255,.35); --g-title-font: "Lilita One", var(--font); --g-title: #FFC83D; }
 .game--goat-bash .game-title { font-weight: 400; letter-spacing: .01em; -webkit-text-stroke: .12em #3A2414; paint-order: stroke fill; text-shadow: 0 .06em 0 #3A2414; }
+.game--disc-golf-wilds { --g-bg: linear-gradient(165deg, #2F6B4F 0%, #1D4A39 50%, #14382B 100%); --g-ink: #FFF8EA; --g-dim: rgba(255,248,234,.8);
+  --g-accent: #FF6A1F; --g-accent-ink: #fff; --g-line: rgba(255,248,234,.22); --g-title-font: "Outfit", var(--font); --g-title: #FFF1D6; }
+.game--disc-golf-wilds .game-title { font-weight: 900; letter-spacing: -.01em; text-shadow: 0 .04em .18em rgba(0,0,0,.3); }
+.game--disc-golf-wilds::before { /* a faint flight line arcing behind the screenshots */
+  background-image: radial-gradient(circle at 76% 34%, transparent 0 31%, rgba(255,177,122,.16) 31.3% 31.8%, transparent 32.1%);
+  mask-image: radial-gradient(ellipse at 72% 40%, #000 25%, transparent 70%);
+}
 .game--goat-bash::before { /* soft sunburst behind the screenshots */
   background-image: repeating-conic-gradient(from 0deg at 72% 38%, rgba(255,214,110,.10) 0deg 9deg, transparent 9deg 18deg);
   mask-image: radial-gradient(ellipse at 72% 40%, #000 20%, transparent 70%);
@@ -228,6 +239,10 @@ section.flush-top { padding-top: 0; }
 .chips--plain li { border-color: var(--line); color: var(--ink); background: var(--surface); }
 .badge-soon--plain { border-color: var(--line); color: var(--ink); }
 .badge-soon--plain small { color: var(--ink-2); }
+a.badge-store.badge-soon--plain { background: var(--frost); border-color: var(--frost); color: var(--frost-ink); }
+a.badge-store.badge-soon--plain small { color: var(--frost-ink); opacity: .75; }
+a.badge-store.badge-soon--plain svg { color: var(--frost-ink); }
+a.badge-store.badge-soon--plain:hover { filter: brightness(1.06); border-color: var(--accent); }
 .game-art {
   position: relative; isolation: isolate; overflow: hidden; border-radius: 28px; aspect-ratio: 5 / 4;
   display: grid; place-items: center; background: var(--g-bg); max-width: 460px; justify-self: end; width: 100%;
